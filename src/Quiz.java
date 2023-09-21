@@ -13,7 +13,6 @@ public class Quiz extends JFrame {
     JButton[] ba;
     JLabel label;
     JLabel question;
-//    JTextArea question;
 
     public Quiz() {
         super("Quiz");
@@ -93,25 +92,15 @@ public class Quiz extends JFrame {
         label.setBackground(Color.white);
         label.setOpaque(true);
 
-        question = new JLabel("<html><body>fajfios gotm sgimrt gstmngstiomgso iegms;oirgtm se;rgioms e;goim seriogmse ;rgiomse;rogi ookp</body></html>");
+        question = new JLabel("");
         question.setFocusable(false);
         question.setFont(new Font("Arial", Font.PLAIN, 20));
         question.setBackground(Color.white);
         question.setOpaque(true);
 
-        //        question = new JTextArea();
-//        question.setLineWrap(true);
-//        question.setWrapStyleWord(true);
-//        question.setFocusable(false);
-//        question.setEditable(false);
-//        question.setFont(new Font("Arial", Font.PLAIN, 20));
-//        question.setBackground(Color.white);
-//        question.setOpaque(true);
-
         ba = new JButton[4];
         for (int i = 0; i < ba.length; i++) {
             ba[i] = new JButton("button");
-//            ba[i] = new JButton("<html><body>fajfios gotm sgimrt gstmngstiomgso iegms;oirgtm se;rgioms e;goim seriogmse ;rgiomse;rogi ookp</body></html>");
             ba[i].setFont(new Font("Arial", Font.PLAIN, 20));
             ba[i].addActionListener(new AbstractAction() {
                 @Override
@@ -124,16 +113,16 @@ public class Quiz extends JFrame {
         this.add(label, new GridBagConstraints(0, 0, 4, 1, 1, 0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
                 new Insets(5,5,5,5), 5, 5));
         this.add(question, new GridBagConstraints(0, 1, 4, 1, 1, 0, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
-                new Insets(5,5,5,5), 0, 0));
+                new Insets(5,5,5,5), 0, 100));
 
         this.add(ba[0], new GridBagConstraints(0, 2, 2, 1, 1, 0, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
-                new Insets(5,5,5,5), 0, 0));
+                new Insets(5,5,5,5), 0, 100));
         this.add(ba[1], new GridBagConstraints(2, 2, 2, 1, 1, 0, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
-                new Insets(5,5,5,5), 0, 0));
+                new Insets(5,5,5,5), 0, 100));
         this.add(ba[2], new GridBagConstraints(0, 3, 2, 1, 1, 0, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
-                new Insets(5,5,5,5), 0, 0));
+                new Insets(5,5,5,5), 0, 100));
         this.add(ba[3], new GridBagConstraints(2, 3, 2, 1, 1, 0, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
-                new Insets(5,5,5,5), 0, 0));
+                new Insets(5,5,5,5), 0, 100));
 
         this.setVisible(true);
 
@@ -166,7 +155,7 @@ public class Quiz extends JFrame {
         label.setText("Вопрос " + (curQuestion + 1) + "/" + q.length);
         question.setText("<html><body>" + q[curQuestion][0] + "</body></html>");
         for (int i = 0; i < 4; i++) {
-            ba[i].setText(q[curQuestion][i+1]);
+            ba[i].setText("<html><body>" + q[curQuestion][i+1] + "</body></html>");
         }
     }
 
